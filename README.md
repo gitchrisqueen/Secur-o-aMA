@@ -34,6 +34,41 @@ This repository is designed to be both a practical tool for developers and an im
 - **Free Resources**: Built entirely using open-source tools and datasets, with no cost barriers to entry.
 - **Real-World Use Cases**: Addresses practical issues such as phishing, malware detection, and unauthorized access.
 
+In the `README.md` file, it's essential to include a **Prerequisites** section that outlines the necessary tools, libraries, and setup steps users need before they can run your project. Here’s what you should include for the **Secur-o-aMA** project:
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+1. **Python 3.8+**:
+   - The project is developed using Python 3.8 or later. Make sure you have Python installed. You can download it from the [official Python website](https://www.python.org/downloads/).
+
+2. **Git**:
+   - You'll need Git installed to clone the repository. Download and install Git from [here](https://git-scm.com/).
+
+3. **Kaggle API**:
+   - To download datasets from Kaggle, you'll need to set up the Kaggle API.
+   - Steps to set up:
+     1. Create a Kaggle account at [Kaggle.com](https://www.kaggle.com/).
+     2. Go to "My Account" and find the "API" section.
+     3. Click "Create New API Token" to download a `kaggle.json` file.
+     4. Place this file in the `~/.kaggle/` directory (create it if it doesn't exist).
+     5. Ensure that the `kaggle.json` file has the correct permissions:
+        ```bash
+        chmod 600 ~/.kaggle/kaggle.json
+        ```
+
+4. **Pip**:
+   - Ensure you have `pip`, the Python package manager, installed. It usually comes with Python, but you can update it using:
+     ```bash
+     python -m pip install --upgrade pip
+     ```
+
+    
+6. **API Access** (For PhishTank dataset):
+   - You’ll need an API key to access the PhishTank database. Sign up at [PhishTank](https://www.phishtank.com/developer_info.php) and include your API key in the `scripts/download_initial_datasets.py` script.
+
+    
 ## Installation
 To run the project locally, you'll need to clone the repository and install the necessary dependencies.
 
@@ -44,6 +79,10 @@ git clone https://github.com/your-username/Secur-o-aMA.git
 # Navigate to the project directory
 cd Secur-o-aMA
 
+# Create a virtual environment
+python -m venv venv
+course venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
 # Install dependencies
 pip install -r requirements.txt
 ```
@@ -51,6 +90,14 @@ pip install -r requirements.txt
 You can also use Google Colab or GitHub Codespaces to run the project without setting up a local environment.
 
 ## Usage
+
+### Download Initial Datasets
+Run the download script to get the initial datasets
+```bash
+python scripts/download_initial_datasets.py
+```
+
+
 ### Data Preprocessing
 Run the preprocessing script or the `data_preprocessing.ipynb` notebook to clean and prepare the datasets.
 

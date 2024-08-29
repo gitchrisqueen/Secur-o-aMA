@@ -1,0 +1,34 @@
+# Utils
+os-env==0.3
+
+
+# For dataset downloading and management
+requests==2.32.3
+urllib3==2.2.2
+
+# For working with Kaggle datasets (ensure Kaggle CLI is set up)
+kaggle==1.6.17
+
+# For data manipulation and preprocessing
+numpy==2.1.0
+pandas==2.2.2
+
+# For data cleaning and text processing
+scikit-learn==1.5.1
+nltk==3.9.1
+
+# For deep learning and model training
+torch==2.2.2
+transformers==4.44.2
+datasets==2.21.0
+
+# For evaluation and metrics
+scipy==1.14.1
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# For Jupyter notebooks (if needed)
+jupyterlab==4.2.5
+
+# For file handling and utilities
+tqdm==4.66.5
